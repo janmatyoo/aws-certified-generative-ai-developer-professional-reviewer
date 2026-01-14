@@ -26,10 +26,33 @@ production-ready Generative AI applications on AWS.
 ---
 
 ## Exam Overview
-- Exam format, duration, and question types
-- Core AWS services used in Generative AI solutions
-- Professional-level focus on architectural tradeoffs
-- Interpreting scenario-based questions
+- **Exam level:** Professional
+- **Exam format:** 85 multiple-choice and multiple-response questions
+- **Duration:** ~205 minutes
+- **Delivery:** Pearson VUE (online proctored or test center)
+- **Language:** English (Japanese available)
+
+- **Target audience:** Developers with hands-on experience building and deploying
+  production-grade Generative AI applications on AWS
+
+- **Primary services covered:**
+  - Amazon Bedrock
+  - Amazon SageMaker
+  - IAM, KMS, VPC
+  - OpenSearch, S3, Lambda, API Gateway
+  - Monitoring and deployment services
+
+- **Exam focus:**
+  - Designing end-to-end Generative AI architectures
+  - Making tradeoffs between cost, latency, scalability, and model quality
+  - Choosing between managed services (Bedrock) and custom solutions (SageMaker)
+  - Applying security, governance, and responsible AI principles
+
+- **Question style:**
+  - Long, scenario-based questions
+  - Multiple constraints (security, cost, performance, compliance)
+  - Emphasis on “best” or “most appropriate” solution, not just what works
+
 
 ---
 
