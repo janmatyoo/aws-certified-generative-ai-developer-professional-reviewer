@@ -1,3 +1,8 @@
+Prompt Management
+- provides version-control and role-aware templates with built-in approval workflows
+
+
+
 Vector Search
 - can be slowed by coordinating many shard-level searches and merging results. Using fewer, larger shards (appropriate shard sizing) reduces fan-out and coordination overhead, improving retrieval latency without changing the FM or the document set.
 
