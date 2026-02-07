@@ -80,8 +80,7 @@ https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html
 https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-quality.html
 https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateEndpoint.html
 
-
-
+---
 
 Amazon Cognito managed work team
 - you can create a new one by using the Amazon Bedrock console
@@ -91,5 +90,14 @@ Amazon Cognito managed work team
 https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-management-private-cognito.html
 https://docs.aws.amazon.com/bedrock/latest/userguide/model-evaluation-jobs-management-create-human.html
 
+---
 
+Ground Truth
+- creates its own model as images are labeled by people
+- As this model learns, only images the model isn’t sure about are sent to human labelers
+- This can reduce the cost of labeling jobs by 70%
 
+Human Labelers
+- Mechanical Turk
+- Your own internal team
+- Professional labeling companies

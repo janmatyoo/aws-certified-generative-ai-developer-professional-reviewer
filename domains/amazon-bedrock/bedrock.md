@@ -77,11 +77,41 @@ Amazon Bedrock application **inference profiles**
 
 https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-use.html
 
+---
 
+Pricing:
 
+- On-Demand
+    - Early stage, testing, experimentation
+    - Unpredictable traffic
+    - Don’t want any commitment or reserving resources
+    - Pay only for tokens processed
+    - Great for POCs or variable use cases
+
+-Provisioned Throughput
+    - Production workloads with predictable traffic
+    - Performance-sensitive applications
+    - Custom model inference (often requires it)
+    - Avoiding throttling when large volumes of tokens/minute are needed
+    - Provides cost predictability and performance guarantees at the expense of upfront resource
+
+---
 
 features:
 - CountTokens API 
-- ConverseStream API
-- Converse API
+    - returns the number of tokens that would be used by a specific input (like a prompt) before you actually send it to a model 
+    - estimate costs before running inference
+    - see token limits for your prompt
+    - optimize prompt length so you don’t exceed model limits
 
+
+- Converse API
+    - sends your conversation (or prompt) to a model and returns a response (a complete message)
+    - this is the main API for building chat apps, assistants, multi-turn conversations, or structured prompts
+
+
+- ConverseStream API
+    - is just like Converse, but instead of waiting for the whole message to be generated before returning it, it streams the response back piece by piece
+    - ideal for real-time apps or live UI updates
+
+---

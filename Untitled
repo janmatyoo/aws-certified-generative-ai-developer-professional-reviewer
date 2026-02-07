@@ -1,0 +1,24 @@
+
+AWS Well-Architected Generative AI Lens
+- guidance document that extends the core AWS Well-Architected Framework specifically for generative AI workloads
+
+1. Operational Excellence
+- Focus on managing generative AI work efficiently — monitoring output quality, handling errors, and automating operations.
+
+2. Security
+- Guidance to protect AI endpoints, secure prompts and training data, and reduce risks like harmful outputs or prompt injection.
+
+3. Reliability
+- Ensure your generative AI systems remain available and resilient, handling failures gracefully and versioning assets safely.
+
+4. Performance Efficiency
+- Tips on selecting the right models, optimizing inference performance, and tuning architectures for efficiency.
+
+5. Cost Optimization
+- Best practices to choose cost-effective models, balance performance vs cost, and optimize storage and compute.
+
+6. Sustainability
+- Guidance on minimizing computational footprint — using efficient models and serverless architectures to reduce environmental impact
+
+
+search vector algorithm question - HNSW vs IVF

@@ -1,9 +1,13 @@
 Amazon Q Business data source connectors
+- Fully managed Gen-AI assistant for your employee
+- Based on your company’s knowledge and data
+- Built on Amazon Bedrock (but you can’t choose the underlying FM)
 - are managed integration points that provide secure connections to external content systems
 - IAM Identity Center is a centralized service to manage user access and permissions across AWS accounts
 - this step uses built-in connectors to integrate content securely
 - this step uses IAM Identity Center enterprise-grade authentication and RBAC
 - this step meets the compliance requirements without custom development.
+- Admin Controls = Guardrails
 
 https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/data-sources.html
 https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/security-iam.html

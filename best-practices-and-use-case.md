@@ -161,12 +161,6 @@ Incorrect:
 - Amazon Bedrock Cross-Region Inference helps with model availability but doesn't address the resilience of the entire application stack
 - AWS Global Accelerator improves network performance but requires healthy endpoints in multiple regions to route to, which this option doesn't specify
 
-**Exam cue:**  
-“Explain predictions and detect bias” → **Clarify**
-
-
-
-
 
 A human-validated dataset ensures an accurate representation of enterprise-specific use cases, terminology, and content patterns. Using LLM-as-a-judge with custom metrics provides an automated, consistent, and scalable evaluation. You can design custom metrics to assess formality scale and company-specific tone and style with consistent criteria. 
 
@@ -227,4 +221,118 @@ https://docs.aws.amazon.com/bedrock/latest/userguide/bda-document-splitting.html
 You can refine blueprint names and definitions. You can use one clear blueprint for each document type. This step can improve the accuracy and consistency of document classification. This step reduces potential conflicts in document type identification. This step ensures that each page is correctly categorized. When you combine this step with document splitting, you have a comprehensive solution to process multipage PDF files with minimal operational overhead. One well-defined blueprint for each content type follows BDA best practices. Multiple blueprints of the same type in a project could lead to worse performance.
 
 https://docs.aws.amazon.com/bedrock/latest/userguide/bda-document-splitting.html#bda-blueprint-best-practices
+
+---
+
+Columnar level access -> AWS Lake Formation
+
+AWS CDK (Cloud Development Kit) 
+- lets you define cloud infrastructure using programming languages instead of writing raw JSON/YAML templates
+
+---
+
+AWS Well-Architected Generative AI Lens
+- overview of GenAI and best practices
+- guidance document that extends the core AWS Well-Architected Framework specifically for generative AI workloads
+
+1. Operational Excellence
+- Focus on managing generative AI work efficiently — monitoring output quality, handling errors, and automating operations.
+
+2. Security
+- Guidance to protect AI endpoints, secure prompts and training data, and reduce risks like harmful outputs or prompt injection.
+
+3. Reliability
+- Ensure your generative AI systems remain available and resilient, handling failures gracefully and versioning assets safely.
+
+4. Performance Efficiency
+- Tips on selecting the right models, optimizing inference performance, and tuning architectures for efficiency.
+
+5. Cost Optimization
+- Best practices to choose cost-effective models, balance performance vs cost, and optimize storage and compute.
+
+6. Sustainability
+- Guidance on minimizing computational footprint — using efficient models and serverless architectures to reduce environmental impact
+
+
+Generative AI lifecycle stages
+1. scoping
+2. model selection
+3. customization
+4. development
+6. deployment
+7. continuous improvement
+
+--- 
+
+Token Efficiency
+
+- Token Estimation and Tracking
+    - Bedrock has a CountTokens API
+        - Returns token count for a given request without actually running it
+        - Different models behave differently
+        - Costs nothing
+    - Estimate costs prior to inference
+    - Optimize prompts to fit within token limits
+    
+- CloudWatch tracks this too – also on the output side
+    - InputTokenCount
+    - outputTokenCount
+
+- Context Window Optimization / Context Pruning
+    - Chunking RAG data, limiting # of chunks retrieved
+    - Filtering chunks by metadata to toss irrelevant stuff
+    - Summarize (or even toss) older parts of conversation
+    history
+
+- Response Size Controls / Response Limiting
+    - Use maxTokens
+    - Bake desired length in the prompt (“respond in 50 words or less”)
+    - Use few-shot examples to illustrate the desired verbosity
+    - Use JSON output to force a given format / length
+
+- Prompt Compression
+    - Use a small model to summarize large chats, documents before sending to larger model
+    - Use Knowledge Bases instead of complete documents in the prompt
+
+---
+
+Exponential Backoff
+- How to retry failed API calls in a controlled manner
+    - Don’t flood the poor broken service
+
+- Custom retry policies in AWS SDKclients
+    - Start at 100ms
+    - Backoff factor 2
+    - Max retry count of 3-5 attempts
+    - Jitter +- 100ms to prevent synchronized retries across clients
+
+---
+
+Search Vector Algorithm
+
+Approximate Nearest Neighbor (ANN) search
+- Heirarchical Navigable Small World (HNSW)
+- builds a multi-layer graph where vectors are connected to their nearest neighbors
+- During search, you traverse the graph from coarse to fine layers to find similar vectors very efficiently
+    - Pros:
+        - fast, high-quality, simple
+        - great for dynamic data
+    - Cons:
+        - Uses lots of RAM
+        - Uses more memory because it stores the graph edges
+        - Slightly slower to build the index initially (graph construction overhead
+
+- Inverted File (IVF)
+- clustering-based method. It divides vectors into clusters (called buckets) using a technique like k-means
+- At search time, it only looks in a subset of clusters instead of the whole dataset
+    Pros:
+        - Lower memory usage than HNSW (no big graph data to store)
+        - better for really huge datasets
+        - Good when you don’t need extremely high recall or have limited RAM
+        - can trade recall for speed & memory
+
+    - Cons:
+        - Requires training/clustering first
+        - Search quality depends on cluster quality
+        - Needs careful tuning of parameters like nlist and nprobe
 
