@@ -312,27 +312,27 @@ Search Vector Algorithm
 
 Approximate Nearest Neighbor (ANN) search
 - Heirarchical Navigable Small World (HNSW)
-- builds a multi-layer graph where vectors are connected to their nearest neighbors
-- During search, you traverse the graph from coarse to fine layers to find similar vectors very efficiently
-    - Pros:
-        - fast, high-quality, simple
-        - great for dynamic data
-    - Cons:
-        - Uses lots of RAM
-        - Uses more memory because it stores the graph edges
-        - Slightly slower to build the index initially (graph construction overhead
+    - builds a multi-layer graph where vectors are connected to their nearest neighbors
+    - During search, you traverse the graph from coarse to fine layers to find similar vectors very efficiently
+        - Pros:
+            - fast, high-quality, simple
+            - great for dynamic data
+        - Cons:
+            - Uses lots of RAM
+            - Uses more memory because it stores the graph edges
+            - Slightly slower to build the index initially (graph construction overhead)
 
 - Inverted File (IVF)
-- clustering-based method. It divides vectors into clusters (called buckets) using a technique like k-means
-- At search time, it only looks in a subset of clusters instead of the whole dataset
-    Pros:
-        - Lower memory usage than HNSW (no big graph data to store)
-        - better for really huge datasets
-        - Good when you don’t need extremely high recall or have limited RAM
-        - can trade recall for speed & memory
+    - clustering-based method. It divides vectors into clusters (called buckets) using a technique like k-means
+    - At search time, it only looks in a subset of clusters instead of the whole dataset
+        Pros:
+            - Lower memory usage than HNSW (no big graph data to store)
+            - better for really huge datasets
+            - Good when you don’t need extremely high recall or have limited RAM
+            - can trade recall for speed & memory
 
-    - Cons:
-        - Requires training/clustering first
-        - Search quality depends on cluster quality
-        - Needs careful tuning of parameters like nlist and nprobe
+        - Cons:
+            - Requires training/clustering first
+            - Search quality depends on cluster quality
+            - Needs careful tuning of parameters like nlist and nprobe
 
