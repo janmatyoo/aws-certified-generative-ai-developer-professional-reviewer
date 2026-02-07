@@ -4,7 +4,7 @@ SageMaker Model Registry
 - supports an approval workflow to control which versions can be deployed
 - track lineage from training datasets to deployed models
 
---
+---
 
 SageMaker asynchronous endpoints
 - provide long-running inference workloads with processing times up to 15 minutes
@@ -12,13 +12,13 @@ SageMaker asynchronous endpoints
 - asynchronous endpoints efficiently manage compute resources
 - this deployment strategy supports GPU instances for efficient processing, handles large datasets (up to 1 GB), and provides scaling based on actual usage
 
---
+---
 
 deployment guardrails
 - provide controlled traffic shifting to a new model version
 - can automatically roll back when CloudWatch alarms indicate failures or regressions
 
---
+---
 
 SageMaker Model Cards
 - to provide structured documentation of FM metadata
@@ -29,7 +29,7 @@ SageMaker Model Cards
 https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html
 https://docs.aws.amazon.com/sagemaker/latest/dg/automating-sagemaker-with-eventbridge.html
 
---
+---
 
 SageMaker AI shadow tests
 - use to deploy a new model variant alongside your production variant on the same endpoint
@@ -38,7 +38,7 @@ SageMaker AI shadow tests
 - SageMaker AI automatically handles the traffic replication and metrics collection
 - after the test period, you can promote the shadow variant to production if the new model performs well
 
---
+---
 
 SageMaker Clarify
 - A tool for explaining model predictions and detecting bias.
@@ -55,7 +55,7 @@ SageMaker Clarify
 - https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html
 - https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-foundation-model-evaluate-whatis.html
 
---
+---
 
 SageMaker Model Monitor
 - a fully managed service that provides continuous monitoring of production ML models
@@ -66,7 +66,7 @@ SageMaker Model Monitor
 https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor.html
 https://aws.amazon.com/blogs/machine-learning/detect-nlp-data-drift-using-custom-amazon-sagemaker-model-monitor/
 
---
+---
 
 Data Capture
 - a SageMaker AI feature that you can use to log actual production interactions on real-time or batch-transform endpoints
