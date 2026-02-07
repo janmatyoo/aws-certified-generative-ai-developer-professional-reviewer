@@ -52,7 +52,7 @@ https://docs.aws.amazon.com/bedrock/latest/userguide/custom-model-use-pt.html
 With continued pre-training
 - a model can learn from large amounts of **unlabeled domain-specific data**
 - this solution continues general language model training on new content
-- the model can **develop a deeper understanding **of the domain's terminology, concepts, and relationships from the 3 TB of proprietary data
+- the model can **develop a deeper understanding** of the domain's terminology, concepts, and relationships from the 3 TB of proprietary data
 
 https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html
 
