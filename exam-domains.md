@@ -5,51 +5,58 @@
 ### 🔹 Domain 1: Foundation Model Integration, Data Management, and Compliance (31%)
 
 **What it covers:**  
-This domain focuses on selecting and integrating foundation models, managing data pipelines for GenAI applications, and ensuring compliance with data governance requirements.
+This domain aligns to the day-to-day work of a GenAI developer across the AI lifecycle: **choose the right foundation model (FM)**, **build data workflows**, **implement vector stores + retrieval**, **engineer prompts**, and **maintain governance/compliance** so the system stays reliable in production.
 
-**Key areas:**
-- Foundation model selection and integration
-- Data ingestion and preprocessing
-- Vector databases and embeddings
-- Knowledge base design
-- Data compliance and governance
-- Prompt engineering fundamentals
+**How this shows up in real projects (high level):**
+- **FM integration**: pick an FM that matches the use case, configure inference behavior, and integrate it safely into an app workflow.
+- **Data management**: ingest, clean, transform, and validate data so downstream retrieval and generation is trustworthy.
+- **RAG foundations**: create embeddings, store them in a vector index, and design retrieval that returns the *right* context quickly.
+- **Prompt systems**: build prompts/templates and guard against brittleness with versioning, testing, and iteration.
+- **Governance + compliance**: apply data controls (classification, access, retention) and quality controls (traceability, evaluation signals).
 
----
+**For this content domain, make sure you can do the following:**
+- **Select and configure FMs** based on business needs (quality, latency, cost, modalities, context window, tooling constraints).
+- **Build data processing and validation pipelines** (dedupe, chunking, metadata, schema/quality checks).
+- **Implement efficient vector databases and retrieval systems** (indexing strategy, filtering, reranking, hybrid search when needed).
+- **Create effective prompt engineering strategies** (prompt structure, examples, tool-use patterns, prompt versioning).
+- **Maintain governance and quality control** across the AI system (data access controls, auditability, evaluation and feedback loops).
 
-#### 1️⃣ Amazon Bedrock Data Automation
+**Key areas (exam-style):**
+- **Foundation model selection & integration**
+  - Model fit (task + modality), inference configuration, and integration patterns
+- **Data ingestion, preprocessing, and validation**
+  - ETL/ELT workflows, document parsing, chunking strategies, metadata hygiene
+- **Embeddings, vector stores, and retrieval design**
+  - Embedding choices, index design, similarity search, filters, reranking, hybrid retrieval
+- **Prompt engineering fundamentals**
+  - Prompt templates, few-shot patterns, tool calling/function calling patterns, prompt management
+- **Compliance, governance, and quality**
+  - Data classification, access control, encryption, retention, lineage, and quality monitoring signals
 
-**What it is:**  
-A managed AWS service that automates transforming unstructured multimodal content (documents, images, video, audio) into structured formats using generative AI. Provides a unified API-driven interface, eliminating the need to orchestrate multiple AI models. Includes built-in safeguards like confidence scores and visual grounding to ensure accuracy and trustworthiness.
+**AWS services/features you’ll likely see in Domain 1 scenarios (examples):**
+- **Amazon Bedrock**
+  - Model access & inference, embeddings, and managed GenAI building blocks (e.g., knowledge base/RAG features)
+- **Amazon SageMaker**
+  - Model hosting and customization workflows where Bedrock-managed models aren’t the right fit
+- **Amazon S3 + AWS Glue**
+  - Storage and data transformation pipelines for documents and datasets
+- **AWS Lake Formation + AWS KMS**
+  - Data governance controls and encryption foundations for compliance requirements
+- **Vector stores (common options)**
+  - Amazon OpenSearch (vector search), relational options with vector support, or purpose-built vector databases
 
-**Used for:**
-- **Intelligent Document Processing (IDP):** Automatically classify, extract, normalize, and validate business-specific data from PDFs, images, forms, and documents without building custom pipelines
-- **Media analysis:** Scene summaries from video, content moderation (unsafe/explicit content detection), text extraction from video frames or images, brand/advertisement recognition
-- **Audio insights:** Extract sentiments, intents, summaries, and topics from audio conversations (meetings, calls, earnings reports)
-- **RAG workflows and AI assistants:** Acts as a parsing layer to convert raw multimodal data into structured insights for retrieval-augmented generation pipelines and knowledge bases
-- **Multi-agent collaboration:** Used in investment research assistants where BDA processes unstructured data (earnings calls, documents) to feed structured insights to specialized agents
+🧠 **Exam cues (what the question is really asking):**
+- “Choose the best FM for business constraints (cost/latency/quality/modality)” → **FM selection & configuration**
+- “Ingest and validate documents before RAG” → **Data processing + chunking + metadata + quality checks**
+- “Improve retrieval quality / reduce irrelevant context” → **Indexing + filters + reranking + hybrid search**
+- “Standardize prompts across teams and releases” → **Prompt templates + versioning + evaluation**
+- “Meet compliance requirements for training/RAG data” → **Governance (access, encryption, retention, auditability)**
 
-**When to use it:**
-- ✅ Large volumes of unstructured/multimodal content need automated conversion to structured formats
-- ✅ Building RAG systems or AI assistants where structured data improves search and context quality
-- ✅ Need unified API for all modalities (documents, images, video, audio) without orchestrating multiple services
-- ✅ Require confidence scores and visual grounding for quality assurance and human-in-the-loop workflows
-- ✅ Fast time-to-value without building and maintaining custom extraction pipelines
-
-**When NOT to use it:**
-- ❌ Data is already strictly structured (CSV, JSON) and no multimodal extraction required
-- ❌ Need ultra-low latency synchronous processing (BDA uses asynchronous job model for some tasks)
-- ❌ Simple OCR-only needs that don't require GenAI-powered understanding
-- ❌ Extremely custom models/extractions beyond BDA's capabilities that require specialized pipelines
-
-🧠 **Exam cue:**  
-"Transform unstructured multimodal content into structured data with unified API" → **Bedrock Data Automation**  
-"IDP workflows with confidence scores, visual grounding, and safeguards" → **Bedrock Data Automation**  
-"Multi-agent systems needing structured insights from raw documents/media" → **Bedrock Data Automation**
-
-**📚 References:**
-- [AWS Documentation: Transform unstructured data using Amazon Bedrock Data Automation](https://docs.aws.amazon.com/bedrock/latest/userguide/bda.html)
-- [AWS Blog: Building an AI-powered assistant for investment research with multi-agent collaboration](https://aws.amazon.com/blogs/machine-learning/part-3-building-an-ai-powered-assistant-for-investment-research-with-multi-agent-collaboration-in-amazon-bedrock-and-amazon-bedrock-data-automation/)
+**📚 References (official docs):**
+- [Amazon Bedrock User Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html)
+- [Amazon Bedrock Knowledge Bases (RAG)](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)
+- [Amazon S3 Security](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security.html)
+- [AWS Lake Formation — Data governance](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-lake-formation.html)
 
 ---
 

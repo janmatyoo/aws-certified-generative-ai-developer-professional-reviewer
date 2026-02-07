@@ -1,39 +1,70 @@
 ## Table of Contents
 
-- **Amazon Bedrock**
-  - [Bedrock](domains/amazon-bedrock/bedrock.md)
-  - [Knowledge Base](domains/amazon-bedrock/knowledge-base.md)
-  - [Guardrails](domains/amazon-bedrock/guardrails.md)
-  - [Provisioned throughput](domains/amazon-bedrock/provisioned-throughput.md)
-  - [Prompt Management](domains/amazon-bedrock/prompt-management.md)
-  - [Titan](domains/amazon-bedrock/titan.md)
+- **Root**
+  - [README](README.md)
+  - [ai-ml-and-gen-ai-concepts](ai-ml-and-gen-ai-concepts.md)
+  - [architectures](architectures.md)
+  - [aws-genai-integrations](aws-genai-integrations.md)
+  - [best-practices-and-use-case](best-practices-and-use-case.md)
+  - [exam-domains](exam-domains.md)
+  - [high-yield-exam-topics](high-yield-exam-topics.md)
+  - [learning](learning.md)
+  - [TEMPLATE-FORMAT](TEMPLATE-FORMAT.md)
+  - [things-to-study](things-to-study.md)
 
-- **Amazon OpenSearch**
-  - [OpenSearch](domains/amazon-opensearch/opensearch.md)
+- **domains/**
+  - **amazon-bedrock/**
+    - [agents](domains/amazon-bedrock/agents.md)
+    - [ai-agents](domains/amazon-bedrock/ai-agents.md)
+    - [api-reference](domains/amazon-bedrock/api-reference.md)
+    - [bedrock](domains/amazon-bedrock/bedrock.md)
+    - [data-automation](domains/amazon-bedrock/data-automation.md)
+    - [flows](domains/amazon-bedrock/flows.md)
+    - [guardrails](domains/amazon-bedrock/guardrails.md)
+    - [intelligent-prompt-routing](domains/amazon-bedrock/intelligent-prompt-routing.md)
+    - [knowledge-base](domains/amazon-bedrock/knowledge-base.md)
+    - [model-evaluation](domains/amazon-bedrock/model-evaluation.md)
+    - [prompt-caching](domains/amazon-bedrock/prompt-caching.md)
+    - [prompt-management](domains/amazon-bedrock/prompt-management.md)
+    - [provisioned-throughput](domains/amazon-bedrock/provisioned-throughput.md)
+    - [retrieval-augmented-generation](domains/amazon-bedrock/retrieval-augmented-generation.md)
+    - [titan](domains/amazon-bedrock/titan.md)
 
-- **Amazon SageMaker**
-  - [SageMaker Model Registry](domains/amazon-sagemaker/sagemaker-model-registry.md)
-  - [deployment guardrails](domains/amazon-sagemaker/deployment-guardrails.md)
-  - [SageMaker asynchronous endpoints](domains/amazon-sagemaker/sagemaker-asynchronous-endpoints.md)
+  - **amazon-opensearch/**
+    - [opensearch](domains/amazon-opensearch/opensearch.md)
 
-- **AWS services**
-  - [AWS services list](domains/aws-services/aws-services-list.md)
-  - [Strands API](domains/aws-services/strands-api.md)
-  - [Amazon Q Developer](domains/aws-services/amazon-q-developer.md)
-  - [Comprehend](domains/aws-services/comprehend.md)
-  - [Kendra](domains/aws-services/kendra.md)
-  - [QuickSight](domains/aws-services/quicksight.md)
-  - [CloudWatch Synthetics](domains/aws-services/cloudwatch-synthetics.md)
-  - [DynamoDB](domains/aws-services/dynamodb.md)
-  - [Amplify](domains/aws-services/amplify.md)
-  - [CloudFront](domains/aws-services/cloudfront.md)
-  - [AWS Glue Data Quality](domains/aws-services/aws-glue-data-quality.md)
+  - **aws-services/**
+    - [agentcore](domains/aws-services/agentcore.md)
+    - [amazon-cognito-oidc-integration](domains/aws-services/amazon-cognito-oidc-integration.md)
+    - [amazon-q-business](domains/aws-services/amazon-q-business.md)
+    - [amazon-q-developer](domains/aws-services/amazon-q-developer.md)
+    - [amplify](domains/aws-services/amplify.md)
+    - [api-gateway](domains/aws-services/api-gateway.md)
+    - [aws-config](domains/aws-services/aws-config.md)
+    - [cloudfront](domains/aws-services/cloudfront.md)
+    - [cloudtrail](domains/aws-services/cloudtrail.md)
+    - [cloudwatch](domains/aws-services/cloudwatch.md)
+    - [codebuild](domains/aws-services/codebuild.md)
+    - [codedeploy](domains/aws-services/codedeploy.md)
+    - [codepipeline](domains/aws-services/codepipeline.md)
+    - [comprehend](domains/aws-services/comprehend.md)
+    - [dynamodb](domains/aws-services/dynamodb.md)
+    - [eventbridge](domains/aws-services/eventbridge.md)
+    - [fargate](domains/aws-services/fargate.md)
+    - [glue](domains/aws-services/glue.md)
+    - [iam-identity-center](domains/aws-services/iam-identity-center.md)
+    - [kendra](domains/aws-services/kendra.md)
+    - [lambda](domains/aws-services/lambda.md)
+    - [macie](domains/aws-services/macie.md)
+    - [quicksight](domains/aws-services/quicksight.md)
+    - [rekognition](domains/aws-services/rekognition.md)
+    - [s3](domains/aws-services/s3.md)
+    - [service-control-policy](domains/aws-services/service-control-policy.md)
+    - [step-functions](domains/aws-services/step-functions.md)
+    - [strands-agents](domains/aws-services/strands-agents.md)
+    - [systems-manager](domains/aws-services/systems-manager.md)
+    - [vpc](domains/aws-services/vpc.md)
 
-- **Identity**
-  - [Amazon Cognito with OIDC integration](domains/identity/amazon-cognito-oidc-integration.md)
-  - [IAM Identity Center with SAML federation](domains/identity/iam-identity-center-saml-federation.md)
-
-- **AgentCore**
-  - [AgentCore SDK with the @app.entrypoint decorator](domains/agentcore/agentcore-sdk-app-entrypoint.md)
-  - [AgentCore starter toolkit](domains/agentcore/agentcore-starter-toolkit.md)
+  - [model-context-protocol](domains/model-context-protocol.md)
+  - [sagemaker](domains/sagemaker.md)
 
