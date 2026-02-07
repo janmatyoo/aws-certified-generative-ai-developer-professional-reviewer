@@ -88,7 +88,7 @@ Pricing:
     - Pay only for tokens processed
     - Great for POCs or variable use cases
 
--Provisioned Throughput
+- Provisioned Throughput
     - Production workloads with predictable traffic
     - Performance-sensitive applications
     - Custom model inference (often requires it)
