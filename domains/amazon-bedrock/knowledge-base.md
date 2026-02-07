@@ -23,7 +23,7 @@ Knowledge Base
 - supports Amazon S3 as a data source
 - supports **hierarchical chunking** as a chunking strategy
 - This solution provides a fully managed end-to-end RAG workflow
-- a managed RAG service that you can use to securely connect an LLM to enterprise dat
+- a managed RAG service that you can use to securely connect an LLM to enterprise data
 
 https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html
 

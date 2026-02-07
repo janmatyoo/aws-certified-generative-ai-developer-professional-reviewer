@@ -7,7 +7,6 @@ AWS Config
 AWS Rule Development Kit (RDK)
 - uses **compliance-as-code** to set continuous automation **checks through AWS Config**
 
-AWS Config s
 
 https://aws.amazon.com/blogs/mt/introducing-the-aws-config-rule-development-kit-rdk/
 https://aws.amazon.com/blogs/mt/create-aws-config-rules-efficiently-with-generative-ai/
