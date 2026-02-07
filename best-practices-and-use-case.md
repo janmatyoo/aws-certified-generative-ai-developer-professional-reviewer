@@ -77,7 +77,7 @@ Cross-Region Inference
 
 
 Continued pre-training
-- a model can learn from large amounts of unlabeled domain-specific dat
+- a model can learn from large amounts of unlabeled domain-specific data
 - this solution continues general language model training on new content
 - the model can develop a deeper understanding of the domain's terminology, concepts, and relationships from the 3 TB of proprietary data
 
@@ -88,7 +88,7 @@ Continued pre-training
 Stop Sequences Parameters
 - stop the model from generating a response
 - stop the model after generating certain key phrases
--t his solution provides a built-in mechanism in the model's API to directly control output generation
+- this solution provides a built-in mechanism in the model's API to directly control output generation
 
 https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages-request-response.html
 
@@ -151,11 +151,11 @@ Amazon ECS on Fargate
 
 
 Effective cross-region resilience (for entire application stack)
-Correct: Create separate, independent deployments in multiple regions with DNS-based routing
-- It ensures complete isolation between regional deployments, so a failure in one region doesn't affect others
-- DNS-based routing (like Amazon Route 53) can detect regional outages and automatically direct traffic to healthy regions
-- Each regional deployment can operate independently with its own resources and foundation model endpoints
-- This approach provides true disaster recovery capabilities in case of a complete regional outage
+- Correct: Create separate, independent deployments in multiple regions with DNS-based routing
+    - It ensures complete isolation between regional deployments, so a failure in one region doesn't affect others
+    - DNS-based routing (like Amazon Route 53) can detect regional outages and automatically direct traffic to healthy regions
+    - Each regional deployment can operate independently with its own resources and foundation model endpoints
+    - This approach provides true disaster recovery capabilities in case of a complete regional outage
 
 Incorrect:
 - Amazon Bedrock Cross-Region Inference helps with model availability but doesn't address the resilience of the entire application stack

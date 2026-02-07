@@ -16,7 +16,7 @@ Which architectural patterns support dynamic model switching without code deploy
 - Using AWS AppConfig to store model configurations and AWS Lambda environment variables
     - AWS AppConfig enables runtime configuration changes and model switching without code deployments.
 - Using Amazon API Gateway with AWS Lambda integration and feature flags in AWS AppConfig
-    - his combination enables dynamic routing and configuration updates while supporting A/B testing.
+    - this combination enables dynamic routing and configuration updates while supporting A/B testing.
 
 
 Which combination of AWS services BEST supports Regional resilience for a mission-critical generative AI (GenAI) application?
