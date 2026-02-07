@@ -29,7 +29,7 @@ IAM Identity Center with SAML federation
 IAM Identity Center 
 - can be use as a centralized way to manage access to multiple AWS accounts and applications
 - supports federation with external IdPs, including SCIM or Entra ID through SAML
-- tThis step provides centralized access control
+- this step provides centralized access control
 - this step integrates with the company's existing Entra ID system
 - this step provides support to enforce job role–based access to Amazon Bedrock.
 
