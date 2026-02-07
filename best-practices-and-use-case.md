@@ -325,7 +325,7 @@ Approximate Nearest Neighbor (ANN) search
 - Inverted File (IVF)
     - clustering-based method. It divides vectors into clusters (called buckets) using a technique like k-means
     - At search time, it only looks in a subset of clusters instead of the whole dataset
-        Pros:
+        - Pros:
             - Lower memory usage than HNSW (no big graph data to store)
             - better for really huge datasets
             - Good when you don’t need extremely high recall or have limited RAM
