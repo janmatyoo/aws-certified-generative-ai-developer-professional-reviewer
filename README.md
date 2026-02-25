@@ -9,134 +9,93 @@ production-ready Generative AI applications on AWS.
 ---
 
 ## Contents
-- [Exam Overview](#exam-overview)
-- [Amazon Bedrock](#amazon-bedrock)
-- [Foundation Models](#foundation-models)
-- [Prompt Engineering](#prompt-engineering)
-- [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-- [Embeddings and Vector Stores](#embeddings-and-vector-stores)
-- [Amazon SageMaker](#amazon-sagemaker)
-- [Generative AI Application Architecture](#generative-ai-application-architecture)
-- [Security, Governance, and Responsible AI](#security-governance-and-responsible-ai)
-- [Monitoring, Evaluation, and Optimization](#monitoring-evaluation-and-optimization)
-- [Deployment and DevOps](#deployment-and-devops)
-- [Cost Optimization](#cost-optimization)
-- [Exam Strategy Notes](#exam-strategy-notes)
+
+### Domain 1: Foundation Model Integration, Data Management, and Compliance (31%)
+- [Amazon Bedrock](topics/domain-1-fm-integration-data-management/bedrock.md)
+- [Amazon Bedrock Data Automation](topics/domain-1-fm-integration-data-management/data-automation.md)
+- [Amazon Bedrock Knowledge Base](topics/domain-1-fm-integration-data-management/knowledge-base.md)
+- [Amazon Bedrock Prompt Management](topics/domain-1-fm-integration-data-management/prompt-management.md)
+- [Amazon Titan](topics/domain-1-fm-integration-data-management/titan.md)
+- [Retrieval-Augmented Generation (RAG)](topics/domain-1-fm-integration-data-management/retrieval-augmented-generation.md)
+- [Amazon Comprehend](topics/domain-1-fm-integration-data-management/comprehend.md)
+- [Amazon OpenSearch Service](topics/domain-1-fm-integration-data-management/opensearch.md)
+- [Amazon S3](topics/domain-1-fm-integration-data-management/s3.md)
+- [AWS Glue](topics/domain-1-fm-integration-data-management/glue.md)
+
+### Domain 2: Implementation and Integration (26%)
+- [Amazon Bedrock Agents](topics/domain-2-implementation-integration/agents.md)
+- [Amazon Bedrock Flows](topics/domain-2-implementation-integration/flows.md)
+- [Amazon Bedrock API Reference](topics/domain-2-implementation-integration/api-reference.md)
+- [AI Agents](topics/domain-2-implementation-integration/ai-agents.md)
+- [AgentCore](topics/domain-2-implementation-integration/agentcore.md)
+- [Strands Agents](topics/domain-2-implementation-integration/strands-agents.md)
+- [Model Context Protocol (MCP)](topics/domain-2-implementation-integration/model-context-protocol.md)
+- [Amazon Q Business](topics/domain-2-implementation-integration/amazon-q-business.md)
+- [Amazon Q Developer](topics/domain-2-implementation-integration/amazon-q-developer.md)
+- [Amazon Kendra](topics/domain-2-implementation-integration/kendra.md)
+- [Amazon Rekognition](topics/domain-2-implementation-integration/rekognition.md)
+- [Amazon API Gateway](topics/domain-2-implementation-integration/api-gateway.md)
+- [AWS AppSync](topics/domain-2-implementation-integration/appsync.md)
+- [AWS Lambda](topics/domain-2-implementation-integration/lambda.md)
+- [AWS Step Functions](topics/domain-2-implementation-integration/step-functions.md)
+- [Amazon EventBridge](topics/domain-2-implementation-integration/eventbridge.md)
+- [AWS Fargate](topics/domain-2-implementation-integration/fargate.md)
+- [Amazon CloudFront](topics/domain-2-implementation-integration/cloudfront.md)
+- [AWS Amplify](topics/domain-2-implementation-integration/amplify.md)
+- [Amazon DynamoDB](topics/domain-2-implementation-integration/dynamodb.md)
+- [Amazon QuickSight](topics/domain-2-implementation-integration/quicksight.md)
+
+### Domain 3: AI Safety, Security, and Governance (20%)
+- [Amazon Bedrock Guardrails](topics/domain-3-safety-security-governance/guardrails.md)
+- [IAM Identity Center](topics/domain-3-safety-security-governance/iam-identity-center.md)
+- [Amazon Cognito with OIDC Integration](topics/domain-3-safety-security-governance/amazon-cognito-oidc-integration.md)
+- [Service Control Policy (SCP)](topics/domain-3-safety-security-governance/service-control-policy.md)
+- [AWS Config](topics/domain-3-safety-security-governance/aws-config.md)
+- [AWS CloudTrail](topics/domain-3-safety-security-governance/cloudtrail.md)
+- [Amazon Macie](topics/domain-3-safety-security-governance/macie.md)
+- [VPC Endpoints / AWS PrivateLink](topics/domain-3-safety-security-governance/vpc.md)
+
+### Domain 4: Operational Efficiency and Optimization (12%)
+- [Prompt Caching](topics/domain-4-operational-efficiency/prompt-caching.md)
+- [Provisioned Throughput](topics/domain-4-operational-efficiency/provisioned-throughput.md)
+- [Intelligent Prompt Routing](topics/domain-4-operational-efficiency/intelligent-prompt-routing.md)
+- [Amazon CloudWatch](topics/domain-4-operational-efficiency/cloudwatch.md)
+- [AWS Systems Manager](topics/domain-4-operational-efficiency/systems-manager.md)
+- [AWS CodeBuild](topics/domain-4-operational-efficiency/codebuild.md)
+- [AWS CodeDeploy](topics/domain-4-operational-efficiency/codedeploy.md)
+- [AWS CodePipeline](topics/domain-4-operational-efficiency/codepipeline.md)
+
+### Domain 5: Testing, Validation, and Troubleshooting (11%)
+- [Model Evaluation](topics/domain-5-testing-validation/model-evaluation.md)
+- [Amazon SageMaker](topics/domain-5-testing-validation/sagemaker.md)
 
 ---
 
 ## Exam Overview
-- Exam format, duration, and question types
-- Core AWS services used in Generative AI solutions
-- Professional-level focus on architectural tradeoffs
-- Interpreting scenario-based questions
+- **Exam level:** Professional
+- **Exam format:** 85 multiple-choice and multiple-response questions
+- **Duration:** ~205 minutes
+- **Delivery:** Pearson VUE (online proctored or test center)
+- **Language:** English (Japanese available)
 
----
+- **Target audience:** Developers with hands-on experience building and deploying
+  production-grade Generative AI applications on AWS
 
-## Amazon Bedrock
-- Purpose of Amazon Bedrock and supported use cases
-- Available foundation model providers and model types
-- Model invocation patterns and request flow
-- Agents and Knowledge Bases architecture
-- Provisioned throughput vs on-demand inference
-- IAM permissions and resource access control
+- **Primary services covered:**
+  - Amazon Bedrock
+  - Amazon SageMaker
+  - IAM, KMS, VPC
+  - OpenSearch, S3, Lambda, API Gateway
+  - Monitoring and deployment services
 
----
+- **Exam focus:**
+  - Designing end-to-end Generative AI architectures
+  - Making tradeoffs between cost, latency, scalability, and model quality
+  - Choosing between managed services (Bedrock) and custom solutions (SageMaker)
+  - Applying security, governance, and responsible AI principles
 
-## Foundation Models
-- Characteristics of foundation models
-- Text, image, and multimodal model capabilities
-- Model selection criteria: quality, latency, cost
-- Prompt engineering vs fine-tuning decision points
-- Limitations and risks of foundation models
+- **Question style:**
+  - Long, scenario-based questions
+  - Multiple constraints (security, cost, performance, compliance)
+  - Emphasis on “best” or “most appropriate” solution, not just what works
 
----
-
-## Prompt Engineering
-- Prompt structure and roles
-- Zero-shot and few-shot prompting strategies
-- Prompt templates and parameter tuning
-- Guardrails for output control
-- Techniques for reducing hallucinations
-- Prompt versioning and testing approaches
-
----
-
-## Retrieval-Augmented Generation (RAG)
-- Purpose of RAG in enterprise applications
-- End-to-end RAG architecture on AWS
-- Data ingestion and preprocessing workflows
-- Chunking strategies and retrieval relevance
-- Query orchestration and response synthesis
-- Managed RAG with Bedrock Knowledge Bases vs custom implementations
-
----
-
-## Embeddings and Vector Stores
-- What embeddings represent and how they are generated
-- Similarity search concepts and distance metrics
-- Vector indexing and retrieval strategies
-- AWS-supported vector store options
-- Performance, scalability, and accuracy tradeoffs
-
----
-
-## Amazon SageMaker
-- When to use SageMaker vs Amazon Bedrock
-- Training, tuning, and hosting generative models
-- Real-time vs asynchronous inference
-- Endpoint scaling and availability
-- Model monitoring and observability
-
----
-
-## Generative AI Application Architecture
-- Reference architectures for GenAI applications
-- Stateless and stateful design considerations
-- API-based and event-driven integration patterns
-- Multi-model orchestration
-- Error handling, retries, and fallback strategies
-
----
-
-## Security, Governance, and Responsible AI
-- IAM best practices for GenAI workloads
-- Data privacy and isolation strategies
-- Encryption in transit and at rest
-- Responsible AI principles and safeguards
-- Content moderation and policy enforcement
-- Audit logging and compliance controls
-
----
-
-## Monitoring, Evaluation, and Optimization
-- Measuring model quality and relevance
-- Prompt and response evaluation techniques
-- Latency, throughput, and error monitoring
-- Logging inputs, outputs, and metadata
-- Continuous improvement feedback loops
-
----
-
-## Deployment and DevOps
-- CI/CD pipelines for GenAI applications
-- Infrastructure as Code approaches
-- Versioning models, prompts, and datasets
-- Deployment strategies and rollback mechanisms
-
----
-
-## Cost Optimization
-- Primary cost drivers in GenAI solutions
-- Token usage and prompt efficiency
-- Model selection based on cost constraints
-- Caching and reuse strategies
-- Tradeoffs between managed and custom solutions
-
----
-
-## Exam Strategy Notes
-- Identifying key requirements in scenario questions
-- Mapping business needs to AWS services
-- Recognizing common distractors
-- Prioritizing security, scalability, and cost efficiency
